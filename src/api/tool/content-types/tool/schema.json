@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tools",
+  "info": {
+    "singularName": "tool",
+    "pluralName": "tools",
+    "displayName": "Tool"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "iconShort": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "iconName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
