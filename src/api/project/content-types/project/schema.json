@@ -93,6 +93,11 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "unique": true
     }
   }
 }
