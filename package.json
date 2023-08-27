@@ -22,7 +22,6 @@
     "sqlite3": "^5.1.6",
     "strapi-plugin-multi-select": "^1.2.2",
     "strapi-plugin-wysiwyg-react-md-editor": "^4.3.0",
-    "strapi-provider-email-nodemailer": "^3.6.11",
     "typescript": "^5.1.6"
   },
   "author": {
