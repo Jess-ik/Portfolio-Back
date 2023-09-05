@@ -23,6 +23,7 @@
     "strapi-plugin-import-export-entries": "^1.21.1",
     "strapi-plugin-multi-select": "^1.2.2",
     "strapi-plugin-wysiwyg-react-md-editor": "^4.3.0",
+    "strapi-provider-email-mailjet": "^4.0.0",
     "typescript": "^5.1.6"
   },
   "author": {

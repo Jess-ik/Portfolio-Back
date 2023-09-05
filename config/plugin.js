@@ -2,22 +2,15 @@ module.exports = ({ env }) => ({
     // ...
     email: {
       config: {
-        provider: 'nodemailer',
-        providerOptions: {
-          host: env('SMTP_HOST', 'smtp.example.com'),
-          port: env('SMTP_PORT', 587),
-          auth: {
-            user: env('SMTP_USERNAME'),
-            pass: env('SMTP_PASSWORD'),
+        provider: "strapi-provider-email-mailjet",
+          providerOptions: {
+            publicApiKey: env("MAILJET_PUBLIC_KEY"),
+            secretApiKey: env("MAILJET_SECRET_KEY"),
           },
-          // ... any custom nodemailer options
+         
         },
-        settings: {
-          defaultFrom: 'hello@example.com',
-          defaultReplyTo: 'hello@example.com',
-        },
+        // ...
       },
-    },
     // ...
     'import-export-entries': {
       enabled: true,
