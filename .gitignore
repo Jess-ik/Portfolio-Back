@@ -72,6 +72,7 @@ $RECYCLE.BIN/
 *.sqlite3
 
 
+
 ############################
 # Misc.
 ############################
@@ -82,6 +83,7 @@ ssl
 nbproject
 public/uploads/*
 !public/uploads/.gitkeep
+package-lock.json
 
 ############################
 # Node.js
