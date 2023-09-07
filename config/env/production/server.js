@@ -1,5 +1,5 @@
 module.exports = ({ env }) => ({
-    url: env("RENDER_EXTERNAL_URL"),
+    url: env("https://strapi-h2ev.onrender.com"),
     dirs: {
       public: "/data/public"
     },

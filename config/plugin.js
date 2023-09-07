@@ -7,7 +7,12 @@ module.exports = ({ env }) => ({
             publicApiKey: env("MAILJET_PUBLIC_KEY"),
             secretApiKey: env("MAILJET_SECRET_KEY"),
           },
-         
+          settings: {
+            defaultFrom: "contact@jess-louvel.com",
+            defaultFromName: "Contact from jess-louvel",
+            defaultTo: "jessica.louvel@gmail.com",
+            defaultToName: "Jessica",
+          },
         },
         // ...
       },
