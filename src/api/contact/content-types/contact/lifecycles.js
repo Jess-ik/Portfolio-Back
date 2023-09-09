@@ -3,7 +3,7 @@ module.exports = {
         const  { result } = event;
 
         try{
-            await strapi.plugins['email'].services.email.send({
+            await strapi.plugins.email.services.email.send({
               to: 'jessica.louvel@gmail.com',
               from: 'contact@jess-louvel.com', // e.g. single sender verification in SendGrid
               replyTo: '${result.email}',
@@ -17,3 +17,5 @@ module.exports = {
         }
     }
 }
+
+
