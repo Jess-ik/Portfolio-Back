@@ -18,11 +18,11 @@ export default factories.createCoreController('api::contact.contact', ({ strapi 
         //console.log(recaptcha)
   
         // Vérifier la clé reCAPTCHA
-        const sitekey = process.env.RECAPTCHA_SITE_KEY;
-            console.log(sitekey)
+        const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+            console.log(secretKey)
   
-       // console.log(`https://www.google.com/recaptcha/api/siteverify?secret=${sitekey}&response=${recaptcha}`);
-        const response = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${sitekey}&response=${recaptcha}`);
+       // console.log(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptcha}`);
+        const response = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptcha}`);
         const { success } = response.data;
   
         if (!success) {
