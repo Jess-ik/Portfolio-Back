@@ -13,7 +13,7 @@ export default factories.createCoreController('api::contact.contact', ({ strapi 
         const { name,
           email,
           message,
-          token } = ctx.request.body.data;
+          recaptcha } = ctx.request.body.data;
   
         //console.log(token)
   
@@ -22,7 +22,7 @@ export default factories.createCoreController('api::contact.contact', ({ strapi 
   
   
         //console.log(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`);
-        const response = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`);
+        const response = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptcha}`);
         const { success } = response.data;
   
         if (!success) {
