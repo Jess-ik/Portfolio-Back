@@ -21,10 +21,10 @@ export default factories.createCoreController('api::contact.contact', ({ strapi 
         const secretKey = process.env.RECAPTCHA_SECRET_KEY;
             console.log(secretKey)
   
-       // console.log(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptcha}`);
+        console.log(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptcha}`);
         const response = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptcha}`);
         const { success } = response.data;
-  
+            console.log(response)
         if (!success) {
           // La vérification de la clé reCAPTCHA a échoué
          ctx.response.status = 400;
