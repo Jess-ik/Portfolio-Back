@@ -13,16 +13,16 @@ export default factories.createCoreController('api::contact.contact', ({ strapi 
         const { name,
           email,
           message,
-          recaptchaValue } = ctx.request.body.data;
+          recaptcha } = ctx.request.body;
   
-        console.log(recaptchaValue)
+        console.log(recaptcha)
   
         // Vérifier la clé reCAPTCHA
         const secretKey = process.env.RECAPTCHA_SECRET_KEY;
             console.log(secretKey)
   
-        console.log(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaValue}`);
-        const response = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptchaValue}`);
+        console.log(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptcha}`);
+        const response = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptcha}`);
         const { success } = response.data;
             console.log(response)
         if (!success) {
