@@ -47,7 +47,7 @@ export default factories.createCoreController('api::contact.contact', ({ strapi 
                    from: 'contact@jess-louvel.com', // e.g. single sender verification in SendGrid
                    subject: "Your request on jess-louvel.com",
                    text: message, // Replace with a valid field ID:
-                  html: 'Hi ' + name + ',<br/>Your message via jess-louvel.com contact form has been received.<br/>I will make sure to get back to you shortly.<br/><br/>Thank you for reaching out! <br/><br/>Best regards,<br/><br/>Jessica Louvel<br/>Front-end Developper<br/><a href="https://jess-louvel.com">https://jess-louvel.com</a><br/><br/>Your message:<br/>' + message, 
+                  html: 'Hi ' + name + ',<br/>Your message via jess-louvel.com contact form has been received.<br/>I will make sure to get back to you shortly.<br/><br/>Thank you for reaching out! <br/><br/>Best regards,<br/><br/>Jessica Louvel<br/>Front-end Developper<br/><a href="https://jess-louvel.com">https://jess-louvel.com</a><br/><br/>Your message:<br/><br/>' + message, 
                   
                  })
 
