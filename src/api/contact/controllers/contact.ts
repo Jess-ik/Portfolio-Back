@@ -42,14 +42,14 @@ export default factories.createCoreController('api::contact.contact', ({ strapi 
             ctx.response.body = { message: "Votre message a été envoyé avec succès." };
 
 
-            //    await strapi.plugins['email'].services.email.send({
-            //       to: email,
-            //       from: 'contact@jess-louvel.com', // e.g. single sender verification in SendGrid
-            //       subject: "Votre demande déposée sur fytech58.fr: "+sujet,
-            //       text: message, // Replace with a valid field ID:
-            //       html: 'Votre demande déposée, via le formulaire de contact du site fytech58.fr, a bien été récéptionnée. Une réponse rapide vous sera apportée. Fytech SAS, vous remercie<br/> <br/>FYTECH SAS, 11 allée Jacques Gandouin, 58000 Nevers, <br/>Tél: 06 49 49 97 70<br/><a href="https://fytech58.fr">https://fytech58.fr</a>', 
-
-            //     })
+               await strapi.plugins['email'].services.email.send({
+                  to: email,
+                   from: 'contact@jess-louvel.com', // e.g. single sender verification in SendGrid
+                   subject: "Your request on jess-louvel.com",
+                   text: message, // Replace with a valid field ID:
+                  html: 'Hi ' + name + ',<br/>Your message via jess-louvel.com contact form has been received. I will make sure to get back to you shortly.<br/><br/>Thank you for reaching out! <br/><br/>Best regards,<br/><br/>Jessica Louvel<br/>Front-end Developper<br/><a href="https://jess-louvel.com">https://jess-louvel.com</a>', 
+                  
+                 })
 
             await strapi.plugins['email'].services.email.send({
                 to: 'jessica.louvel@gmail.com',
