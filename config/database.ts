@@ -1,6 +1,6 @@
-const path = require('path');
+import path from 'path';
 
-module.exports = ({ env }) => ({
+export default ({ env }: any) => ({
   connection: {
     client: 'sqlite',
     connection: {
