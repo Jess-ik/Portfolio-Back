@@ -14,7 +14,7 @@ export default factories.createCoreController('api::contact.contact', ({ strapi 
                 email,
                 message
             } = ctx.request.body.data;
-            const recaptcha = ctx.request.body;
+            const {recaptcha} = ctx.request.body;
             console.log(recaptcha)
 
             // Vérifier la clé reCAPTCHA
