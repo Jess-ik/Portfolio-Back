@@ -2,7 +2,7 @@ export async function afterCreate(event: any): Promise<void> {
     const { result } = event;
   
     try {
-      await strapi.plugins.email.services.email.send({
+      await strapi.plugins['email'].services.email.send({
         to: 'jessica.louvel@gmail.com',
         from: 'contact@jess-louvel.com',
         replyTo: `${result.email}`,
