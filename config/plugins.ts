@@ -9,8 +9,8 @@ export default ({ env }: any) => ({
         host: 'in-v3.mailjet.com', // Mailjet SMTP server host
         port: 587, // Mailjet SMTP server port
         auth: {
-          user: env('MAILJET_PUBLIC_KEY'), // Utilisez votre clé API Mailjet
-          pass: env('MAILJET_SECRET_KEY'), // Utilisez votre clé secrète API Mailjet
+          apiKey: env('MAILJET_PUBLIC_KEY'), // Utilisez votre clé API Mailjet
+          apiSecret: env('MAILJET_SECRET_KEY'), // Utilisez votre clé secrète API Mailjet
         }
      
     },
