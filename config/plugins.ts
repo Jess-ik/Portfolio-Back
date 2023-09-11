@@ -6,11 +6,11 @@ export default ({ env }: any) => ({
     config: {
     provider: 'nodemailer',
       providerOptions: {
-        host: 'in-v3.mailjet.com', // Mailjet SMTP server host
-        port: 587, // Mailjet SMTP server port
+        host: 'ssl0.ovh.net', // Mailjet SMTP server host
+        port: 465, // Mailjet SMTP server port
         auth: {
-          apiKey: process.env.MAILJET_PUBLIC_KEY, // Utilisez votre clé API Mailjet
-          apiSecret: process.env.MAILJET_SECRET_KEY // Utilisez votre clé secrète API Mailjet
+          user: process.env.OVH_USER, // Utilisez votre clé API Mailjet
+          pass: process.env.OVH_PASS // Utilisez votre clé secrète API Mailjet
         }
      
     },
