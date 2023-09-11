@@ -13,13 +13,13 @@ export default factories.createCoreController('api::contact.contact', ({ strapi 
         const { name,
           email,
           message,
-           } = ctx.request.body.data;
+          recaptcha } = ctx.request.body.data;
   
         //console.log(recaptcha)
   
         // Vérifier la clé reCAPTCHA
-        //const secretKey = process.env.RECAPTCHA_SECRET_KEY;
-  
+        const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+            console.log(secretKey)
   
        // console.log(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptcha}`);
        // const response = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${recaptcha}`);
@@ -56,7 +56,7 @@ export default factories.createCoreController('api::contact.contact', ({ strapi 
           from: 'contact@jess-louvel.com', // e.g. single sender verification in SendGrid
           subject: "Nouveau message sur jess-louvel",
           text: message, // Replace with a valid field ID:
-          html: 'Vous avez reçu une nouvelle demande du formulaire de contact de jess-louvel.com: <br/><ul><li>Nom et Prénom: '+name+'</li><li>Email: '+email+'</li><li>message: '+message+'</li>', 
+          html: 'Nouvelle demande de contact depuis jess-louvel.com: <br/><ul><li>Nom: '+name+'</li><li>Email: '+email+'</li><li>message: '+message+'</li>', 
             
         })
         return;
