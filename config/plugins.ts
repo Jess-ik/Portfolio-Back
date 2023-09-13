@@ -26,6 +26,7 @@ export default ({ env }: any) => ({
     enabled: true,
     config: {
       // See `Config` section.
+      serverPublicHostname: 'https://strapi-h2ev.onrender.com/',
     },
   },
   // ...

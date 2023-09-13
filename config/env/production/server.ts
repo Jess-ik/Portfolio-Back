@@ -1,5 +1,5 @@
 export default ({ env }: any) => ({
-    url: env("https://strapi-h2ev.onrender.com"),
+    url: env("RENDER_EXTERNAL_URL"),
     dirs: {
       public: "/data/public"
     },
