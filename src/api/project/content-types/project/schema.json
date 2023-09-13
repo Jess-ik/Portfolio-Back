@@ -49,6 +49,15 @@
         "videos"
       ]
     },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
     "size": {
       "type": "string",
       "default": "md:w-6/12 lg:w-4/12"
