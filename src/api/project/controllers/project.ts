@@ -10,7 +10,7 @@ export default factories.createCoreController('api::project.project', ({ strapi 
 
         const entity = await strapi.db.query('api::project.project').findOne({
             where: { slug: id },
-            populate: ["heroImage", "showcaseImage", "tools", "gallery"],
+            populate: ["heroImage", "showcaseImage", "coverImage", "tools", "gallery"],
           
             
 
