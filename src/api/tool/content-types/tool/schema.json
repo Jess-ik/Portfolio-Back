@@ -19,20 +19,20 @@
     "iconShort": {
       "type": "string",
       "required": true,
-      "unique": true,
+      "unique": false,
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     },
     "iconName": {
       "type": "string",
       "required": true,
-      "unique": true,
+      "unique": false,
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     }
